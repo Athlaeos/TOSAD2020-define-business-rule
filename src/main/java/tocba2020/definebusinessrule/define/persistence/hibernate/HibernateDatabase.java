@@ -13,7 +13,7 @@ public class HibernateDatabase {
 		Configuration config = new Configuration();
 		
 		config.setProperty("hibernate.connection.driver_class", "oracle.jdbc.OracleDriver");
-		config.setProperty("hibernate.connection.url", "jdbc:oracle:thin:@ondora04.hu.nl:8521:EDUC21");
+		config.setProperty("hibernate.connection.url", "jdbc:oracle:thin:@//ondora04.hu.nl:8521/EDUC21");
 		config.setProperty("hibernate.connection.username", "TOSAD");
 		config.setProperty("hibernate.connection.password", "tosadgroep6");
 		config.setProperty("hibernate.dialect", "org.hibernate.dialect.Oracle8iDialect");
