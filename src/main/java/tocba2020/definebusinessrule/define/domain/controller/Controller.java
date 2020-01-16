@@ -1,14 +1,24 @@
 package tocba2020.definebusinessrule.define.domain.controller;
 
+import org.hibernate.Hibernate;
+
 import tocba2020.definebusinessrule.define.domain.builders.*;
 import tocba2020.definebusinessrule.define.domain.businessrules.BusinessRule;
+import tocba2020.definebusinessrule.define.persistence.hibernate.HibernateDatabase;
 
 public class Controller {
 	
-	public void defineAttributeRangeRule(String database, String table, String column, String constraintName, int minValue, int maxValue) {
+	public void defineAttributeRangeRule(	int id,
+											String database, 
+											String table, 
+											String column, 
+											String constraintName, 
+											int minValue, 
+											int maxValue) {
 		
 		AttributeRangeRuleBuilder attributeRangeRuleBuilder = new AttributeRangeRuleBuilder();
 		
+		attributeRangeRuleBuilder.setId(id);
 		attributeRangeRuleBuilder.setDatabase(database);
 		attributeRangeRuleBuilder.setTable(table);
 		attributeRangeRuleBuilder.setColumn(column);
@@ -18,7 +28,13 @@ public class Controller {
 		
 		BusinessRule attributeRangeRule = attributeRangeRuleBuilder.build();
 		
-		attributeRangeRule.toString();
+		System.out.println(attributeRangeRule.getId());
+		
+		System.out.println(attributeRangeRule.toString());
+		
+		HibernateDatabase hibernate = new HibernateDatabase();
+		hibernate.storeBusinessRule(attributeRangeRule);
+		
 		
 		}
 	}

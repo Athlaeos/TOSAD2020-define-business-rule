@@ -4,12 +4,17 @@ import tocba2020.definebusinessrule.define.domain.businessrules.AttributeRangeRu
 import tocba2020.definebusinessrule.define.domain.businessrules.BusinessRule;
 
 public class AttributeRangeRuleBuilder implements BusinessRuleBuilder{
+	int id;
 	private String database;
 	private String table;
 	private String column;
 	private String constraintName;
 	private int minValue;
 	private int maxValue;
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	public void setDatabase(String database) {
 		this.database = database;		
@@ -37,7 +42,7 @@ public class AttributeRangeRuleBuilder implements BusinessRuleBuilder{
 	}
 
 	public BusinessRule build() {
-		return new AttributeRangeRule(this.database, this.table, this.column, this.constraintName, this.minValue, this.maxValue);
+		return new AttributeRangeRule(this.id, this.database, this.table, this.column, this.constraintName, this.minValue, this.maxValue);
 	}
 
 
