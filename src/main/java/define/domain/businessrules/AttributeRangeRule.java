@@ -8,7 +8,7 @@ public class AttributeRangeRule implements BusinessRule {
 	private String constraintName;
 	private int minValue;
 	private int maxValue;
-	
+
 	public AttributeRangeRule(int id, String database, String table, String column, String constraintName, int minValue, int maxValue) {
 		this.id = id;
 		this.database = database;
@@ -18,12 +18,12 @@ public class AttributeRangeRule implements BusinessRule {
 		this.minValue = minValue;
 		this.maxValue = maxValue;
 	}
-	
+
 	public int getId () {
 		return this.id;
 	}
-	
-	
+
+
 	public String toString() {
 		return id + " " + database + " " + table + " " + column + " " + constraintName + " " + minValue + " " + maxValue;
 	}
