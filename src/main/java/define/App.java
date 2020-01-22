@@ -1,7 +1,6 @@
 package define;
 
 import define.application.serviceinterfaces.Controller;
-import org.hibernate.cfg.Configuration;
 
 public class App {
     
