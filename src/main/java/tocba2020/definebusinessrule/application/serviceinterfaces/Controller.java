@@ -1,10 +1,8 @@
-package tocba2020.definebusinessrule.define.domain.controller;
+package tocba2020.definebusinessrule.application.serviceinterfaces;
 
 import org.hibernate.Hibernate;
 
-import tocba2020.definebusinessrule.define.domain.builders.*;
-import tocba2020.definebusinessrule.define.domain.businessrules.BusinessRule;
-import tocba2020.definebusinessrule.define.persistence.hibernate.HibernateDatabase;
+import tocba2020.definebusinessrule.domain.businessrules.BusinessRule;
 
 public class Controller {
 	
