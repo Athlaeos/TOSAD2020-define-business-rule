@@ -1,31 +1,21 @@
 package define.domain.businessrules;
 
-public class AttributeRangeRule implements BusinessRule {
-	private int id;
-	private String database;
-	private String table;
-	private String column;
-	private String constraintName;
-	private int minValue;
-	private int maxValue;
+public class AttributeRangeRule extends BusinessRule {
+	private boolean notter;
+	private String operatorValue;
+	private String compareValue1;
+	private String compareValue2;
 
-	public AttributeRangeRule(int id, String database, String table, String column, String constraintName, int minValue, int maxValue) {
-		this.id = id;
-		this.database = database;
-		this.table = table;
-		this.column = column;
-		this.constraintName = constraintName;
-		this.minValue = minValue;
-		this.maxValue = maxValue;
+	public AttributeRangeRule(String businessRuleName, String description, String when, String event, boolean forEachRow, String errorMessage, boolean notter, String operatorValue, String compareValue1, String compareValue2) {
+		super(businessRuleName, description, when, event, forEachRow, errorMessage);
+		this.notter = notter;
+		this.operatorValue = operatorValue;
+		this.compareValue1 = compareValue1;
+		this.compareValue2 = compareValue2;
 	}
-
-	public int getId () {
-		return this.id;
-	}
-
 
 	public String toString() {
-		return id + " " + database + " " + table + " " + column + " " + constraintName + " " + minValue + " " + maxValue;
+		return super.toString() + " | " + notter + " | " + operatorValue + " | " + compareValue1 + " | " + compareValue2;
 	}
 
 }

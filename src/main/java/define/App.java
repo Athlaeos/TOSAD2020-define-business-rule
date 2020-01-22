@@ -7,7 +7,15 @@ public class App {
         System.out.println( "Hello World!" );
 
         Controller controller = new Controller();
-        controller.defineAttributeRangeRule(1, "oracle", "persons", "age", "CHK_rangeRuleTest", 10, 20);
+
+        controller.defineAttributeRangeRule("CHK_RangeRuleTest",
+                "This is a nice little description :)",
+                "before",
+                "trigger event",
+                true,
+                "Wolla dit gaat helemaal fout",
+                true,
+                "15", "10", "20");
 
     }
 

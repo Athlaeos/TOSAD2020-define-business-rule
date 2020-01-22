@@ -3,16 +3,18 @@ import define.domain.businessrules.AttributeRangeRule;
 
 public class Controller {
 
-	public void defineAttributeRangeRule(	int id,
-											String database,
-											String table,
-											String column,
-											String constraintName,
-											int minValue,
-											int maxValue) {
+	public void defineAttributeRangeRule(	String businessRuleName,
+											String description,
+										 	String when,
+											String event,
+										 	boolean forEachRow,
+										 	String errorMessage,
+									 		boolean notter,
+										 	String operatorValue,
+										 	String compareValue1,
+										 	String compareValue2) {
 
-		AttributeRangeRule attributeRangeRule = new AttributeRangeRule(id, database, table, column, constraintName, minValue, maxValue);
-
+		AttributeRangeRule attributeRangeRule = new AttributeRangeRule(businessRuleName, description, when, event, forEachRow, errorMessage, notter, operatorValue, compareValue1, compareValue2);
 
 		System.out.println(attributeRangeRule.toString());
 
