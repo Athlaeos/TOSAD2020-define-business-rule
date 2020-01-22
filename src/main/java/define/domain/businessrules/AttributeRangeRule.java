@@ -1,4 +1,4 @@
-package tocba2020.definebusinessrule.define.domain.businessrules;
+package define.domain.businessrules;
 
 import javax.persistence.*;
 

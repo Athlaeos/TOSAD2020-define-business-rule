@@ -1,4 +1,4 @@
-package tocba2020.definebusinessrule.application.serviceinterfaces;
+package define.application.serviceinterfaces;
 
 import org.hibernate.Hibernate;
 
