@@ -1,8 +1,5 @@
 package define.domain.businessrules;
 
-import javax.persistence.*;
-
-@Entity
 public class AttributeRangeRule implements BusinessRule {
 	private int id;
 	private String database;
@@ -21,9 +18,7 @@ public class AttributeRangeRule implements BusinessRule {
 		this.minValue = minValue;
 		this.maxValue = maxValue;
 	}
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+
 	public int getId () {
 		return this.id;
 	}
