@@ -2,7 +2,8 @@ package define.application.serviceinterfaces;
 
 import org.hibernate.Hibernate;
 
-import tocba2020.definebusinessrule.domain.businessrules.BusinessRule;
+import define.domain.businessrules.AttributeRangeRule;
+import define.domain.businessrules.BusinessRule;
 
 public class Controller {
 	
@@ -14,24 +15,12 @@ public class Controller {
 											int minValue, 
 											int maxValue) {
 		
-		AttributeRangeRuleBuilder attributeRangeRuleBuilder = new AttributeRangeRuleBuilder();
-		
-		attributeRangeRuleBuilder.setId(id);
-		attributeRangeRuleBuilder.setDatabase(database);
-		attributeRangeRuleBuilder.setTable(table);
-		attributeRangeRuleBuilder.setColumn(column);
-		attributeRangeRuleBuilder.setConstraintName(constraintName);
-		attributeRangeRuleBuilder.setMinValue(minValue);
-		attributeRangeRuleBuilder.setMaxValue(maxValue);
-		
-		BusinessRule attributeRangeRule = attributeRangeRuleBuilder.build();
+		AttributeRangeRule attributeRangeRule = new AttributeRangeRule(id, database, table, column, constraintName, minValue, maxValue);
+
 		
 		System.out.println(attributeRangeRule.getId());
 		
 		System.out.println(attributeRangeRule.toString());
-		
-		HibernateDatabase hibernate = new HibernateDatabase();
-		hibernate.storeBusinessRule(attributeRangeRule);
 		
 		
 		}

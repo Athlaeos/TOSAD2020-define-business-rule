@@ -1,6 +1,6 @@
-package tocba2020.definebusinessrule;
+package define;
 
-import tocba2020.definebusinessrule.application.serviceinterfaces.Controller;
+import define.application.serviceinterfaces.Controller;
 import org.hibernate.cfg.Configuration;
 
 public class App {
